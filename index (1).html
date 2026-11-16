@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14532d">
+  <title>ECO SORT — Recycle & Earn</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" data-view="home"><span class="brand-mark">♻</span><span>ECO<span class="brand-accent">SORT</span></span></a>
+      <nav id="main-nav" class="nav hidden">
+        <button data-view="dashboard">Dashboard</button>
+        <button data-view="play">Sort Waste</button>
+        <button data-view="rewards">Rewards</button>
+        <button data-view="leaderboard">Leaderboard</button>
+      </nav>
+      <div class="account-area" id="account-area">
+        <button class="btn btn-ghost" data-view="login">Log in</button>
+        <button class="btn btn-primary" data-view="signup">Sign up</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="view-home" class="view active">
+        <div class="hero">
+          <div class="hero-copy">
+            <span class="eyebrow">SMALL ACTIONS. BIG IMPACT.</span>
+            <h1>A cleaner planet<br><span>starts with you.</span></h1>
+            <p>Snap a photo, sort your waste into the right bin, earn points and unlock virtual rewards. Make every item count.</p>
+            <div class="hero-actions">
+              <button class="btn btn-primary btn-large" data-view="signup">Get started <span>→</span></button>
+              <button class="btn btn-outline btn-large" data-view="play">Explore the game</button>
+            </div>
+            <div class="hero-note"><span class="pulse"></span> Free to join · Open to everyone</div>
+          </div>
+          <div class="hero-art">
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+            <div class="earth">🌎</div>
+            <div class="float-card card-leaf">🌱 <span>Make it green</span></div>
+            <div class="float-card card-points">⭐ <b>+10 points</b></div>
+            <div class="bin-illustration"><div class="mini-bin blue">♻</div><div class="mini-bin brown">🍂</div><div class="mini-bin gray">🗑</div></div>
+          </div>
+        </div>
+        <div class="feature-grid">
+          <article class="feature"><div class="feature-icon">📸</div><h3>1. Snap a photo</h3><p>Take a picture or upload an image of an item you want to sort.</p></article>
+          <article class="feature"><div class="feature-icon">🗂️</div><h3>2. Choose a bin</h3><p>Pick the correct bin: recyclable, organic or general waste.</p></article>
+          <article class="feature"><div class="feature-icon">🎁</div><h3>3. Earn rewards</h3><p>Collect points for correct answers and unlock virtual rewards.</p></article>
+        </div>
+        <div class="bin-guide">
+          <div><span class="eyebrow">LEARN THE BASICS</span><h2>Three bins. One better planet.</h2><p>Learn what belongs in each bin before you play.</p></div>
+          <div class="guide-bins">
+            <div class="guide-bin"><span class="bin-icon blue-bin">♻</span><b>Blue</b><span>Recyclable Waste</span></div>
+            <div class="guide-bin"><span class="bin-icon brown-bin">🍃</span><b>Brown</b><span>Organic Waste</span></div>
+            <div class="guide-bin"><span class="bin-icon gray-bin">🗑</span><b>Gray</b><span>General Waste</span></div>
+          </div>
+        </div>
+        <footer>© <span class="year"></span> ECO SORT. Learn, sort and make a difference.</footer>
+      </section>
+
+      <section id="view-signup" class="view auth-view">
+        <div class="auth-card"><div class="auth-symbol">♻</div><span class="eyebrow">JOIN THE MOVEMENT</span><h2>Create your account</h2><p>Start sorting waste and earning points today.</p>
+          <form id="signup-form">
+            <label>Username<input name="username" minlength="3" maxlength="20" required placeholder="Choose a username"></label>
+            <label>Email address<input name="email" type="email" required placeholder="you@example.com"></label>
+            <label>Password<input name="password" type="password" minlength="6" required placeholder="At least 6 characters"></label>
+            <button class="btn btn-primary full" type="submit">Create account</button>
+          </form><p class="auth-switch">Already have an account? <button class="text-btn" data-view="login">Log in</button></p>
+          <p class="small-print">Demo version: account data is stored only in this browser on this device. Do not use a real password.</p>
+        </div>
+      </section>
+
+      <section id="view-login" class="view auth-view">
+        <div class="auth-card"><div class="auth-symbol">🌿</div><span class="eyebrow">WELCOME BACK</span><h2>Log in</h2><p>Your next good habit starts here.</p>
+          <form id="login-form">
+            <label>Email address<input name="email" type="email" required placeholder="you@example.com"></label>
+            <label>Password<input name="password" type="password" required placeholder="Your password"></label>
+            <button class="btn btn-primary full" type="submit">Log in</button>
+          </form><p class="auth-switch">New to ECO SORT? <button class="text-btn" data-view="signup">Create an account</button></p>
+        </div>
+      </section>
+
+      <section id="view-dashboard" class="view">
+        <div class="page-heading"><div><span class="eyebrow">YOUR ECO JOURNEY</span><h1>Welcome back, <span id="welcome-name">friend</span>!</h1><p>Every correct sort makes a difference.</p></div><button class="btn btn-primary" data-view="play">＋ Sort an item</button></div>
+        <div class="stats-grid">
+          <div class="stat-card"><span>Total points</span><strong id="stat-points">0</strong><small>⭐ Your reward balance</small></div>
+          <div class="stat-card"><span>Items sorted</span><strong id="stat-sorted">0</strong><small>♻ Correct classifications</small></div>
+          <div class="stat-card"><span>Rewards unlocked</span><strong id="stat-rewards">0</strong><small>🎁 Your collection</small></div>
+        </div>
+        <div class="dashboard-grid">
+          <div class="panel"><div class="panel-title"><h3>Quick start</h3><span>📸</span></div><p>Have an item nearby? Take a photo and choose its correct bin.</p><button class="btn btn-primary" data-view="play">Start sorting →</button></div>
+          <div class="panel qr-panel"><div><div class="panel-title"><h3>Invite a friend</h3><span>🔗</span></div><p>Once this site is published, scan or share its link to invite others.</p><code id="site-url">Your website link appears here</code><button class="btn btn-outline" id="copy-link">Copy website link</button></div><div id="qrcode" aria-label="Website QR code"></div></div>
+        </div>
+        <div class="panel"><div class="panel-title"><h3>Recent activity</h3><span>🕘</span></div><div id="activity-list" class="activity-list"><p class="muted">Your sorting activity will appear here.</p></div></div>
+      </section>
+
+      <section id="view-play" class="view">
+        <div class="page-heading"><div><span class="eyebrow">SORTING CHALLENGE</span><h1>Give waste a <span>second chance.</span></h1><p>Upload a photo, then choose the bin that matches the item.</p></div><div class="points-pill">⭐ <b id="play-points">0</b> points</div></div>
+        <div class="play-layout">
+          <div class="panel upload-panel">
+            <div class="step-label"><span>01</span> ADD YOUR PHOTO</div>
+            <label class="upload-zone" for="photo-input" id="upload-zone">
+              <div id="upload-placeholder"><div class="upload-icon">📷</div><b>Take a photo or upload an image</b><span>JPG, PNG or WEBP · Max 8 MB</span><em class="btn btn-outline">Choose image</em></div>
+              <img id="photo-preview" class="photo-preview hidden" alt="Your uploaded waste item">
+            </label>
+            <input id="photo-input" type="file" accept="image/*" capture="environment" hidden>
+            <div class="demo-note"><b>Demo mode:</b> This prototype does not use AI image recognition yet. After uploading, select the sample item's category to test the sorting and points flow.</div>
+            <div id="sample-selector" class="sample-selector hidden"><label for="sample-item">Choose a sample item for this demo</label><select id="sample-item"><option value="">Select an item...</option><option value="recyclable">Plastic bottle / paper / metal can</option><option value="organic">Fruit peel / food scraps / leaves</option><option value="general">Used tissue / broken ceramic / wrapper</option></select></div>
+          </div>
+          <div class="panel bins-panel">
+            <div class="step-label"><span>02</span> CHOOSE THE RIGHT BIN</div>
+            <p class="muted">Select one of the three bins below.</p>
+            <div class="bin-options">
+              <button class="bin-choice" data-bin="recyclable" disabled><span class="bin-visual blue-bin">♻</span><b>BLUE BIN</b><span>Recyclable Waste</span><small>Paper, plastic, metal, glass</small></button>
+              <button class="bin-choice" data-bin="organic" disabled><span class="bin-visual brown-bin">🍃</span><b>BROWN BIN</b><span>Organic Waste</span><small>Food scraps, fruit peels, leaves</small></button>
+              <button class="bin-choice" data-bin="general" disabled><span class="bin-visual gray-bin">🗑</span><b>GRAY BIN</b><span>General Waste</span><small>Non-recyclable residual waste</small></button>
+            </div>
+            <div id="feedback" class="feedback hidden" role="status"></div>
+            <button id="next-item" class="btn btn-primary full hidden">Sort another item</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="view-rewards" class="view">
+        <div class="page-heading"><div><span class="eyebrow">YOUR POINTS, YOUR PERKS</span><h1>Reward <span>your impact.</span></h1><p>Use your points to unlock virtual collectibles.</p></div><div class="points-pill">⭐ <b id="reward-points">0</b> points</div></div>
+        <div class="reward-grid" id="reward-grid"></div>
+        <p class="small-print">Virtual rewards are digital badges and profile items in this demo. They have no cash value.</p>
+      </section>
+
+      <section id="view-leaderboard" class="view">
+        <div class="page-heading"><div><span class="eyebrow">GROW TOGETHER</span><h1>Eco <span>Leaderboard.</span></h1><p>Celebrate the people making greener choices.</p></div>🏆</div>
+        <div class="panel"><div class="leader-row leader-head"><span>Rank</span><span>Player</span><span>Points</span></div><div id="leader-list"></div><p class="small-print">This demo leaderboard shows accounts created in this browser only. A shared global leaderboard needs an online database.</p></div>
+      </section>
+    </main>
+    <div id="toast" class="toast" role="status"></div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
